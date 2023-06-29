@@ -26,7 +26,7 @@ const Sidebar = () => {
             ) : (
                 <FaHamburger size={24} />
             )}
-            <div className={`fixed top-0 left-0 z-20 w-60 h-screen bg-black text-[#FDDF3A] transform rounded-r-3xl transition-transform duration-500 ease-in-out ${isOpen ? "translate-x-0" : "-translate-x-full"} overflow-hidden`}>
+            <div className={`fixed top-0 left-0 z-20 w-60 h-screen bg-black text-[#FDDF3A] transform rounded-r-3xl transition-transform duration-500 ease-in-out ${isOpen ? "translate-x-0" : "-translate-x-full"} overflow-hidden flex flex-col justify-between`}>
                 <button className="absolute top-4 right-3 text-[#FDDF3A]" onClick={toggleMenu}>
                     <FaTimes size={24} />
                 </button>
@@ -40,7 +40,7 @@ const Sidebar = () => {
                     <a href="#contacto" className="py-2">Contacto y Sugerencias</a>
                     <a href="#trabaja" className="py-2">Trabajá con nosotros!</a>
                 </nav>
-                <div className="bg-[#FDDF3A] h-px relative top-64">
+                <div className="bg-[#FDDF3A] h-px mb-28">
 
                     <div className="flex text-center p-3 font-custom1">
                         Seguinos en instagram!

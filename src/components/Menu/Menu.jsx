@@ -15,8 +15,8 @@ const Menu = () => {
   return (
     <>
   
-      <div className="max-w-[1400px] w-full m-auto text-yellow-400">
-        <div className="bg-yellow-400">
+      <div className="max-w-[1400px] w-full m-aut text-[#FDDF3A]">
+        <div className="bg-[#FDDF3A]">
           <div className="mx-auto max-w-2xl px-4 py-8 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
             <h2 className="text-2xl font-bold text-center text-black font-custom1 border-b-2 border-current mt-12">NUESTRAS CREACIONES</h2>
             <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
