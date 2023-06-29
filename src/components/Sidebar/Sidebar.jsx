@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { FaHamburger, FaTimes, FaInstagram } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -31,22 +32,22 @@ const Sidebar = () => {
                     <FaTimes size={24} />
                 </button>
                 <nav className="flex flex-col p-4 font-custom1 mt-5">
-                    <a href="#inicio" className="py-2">Inicio</a>
-                    <a href="#menu" className="py-2">Menú</a>
-                    <a href="https://pedidos.theboxburgerculture.com.ar/" className="py-2">Pedí por acá!</a>
-                    <a href="#branches" className="py-2">Locales</a>
-                    <a href="#franquicias" className="py-2">Franquicias</a>
-                    <a href="#cultura" className="py-2">Cultura TheBOX</a>
-                    <a href="#contacto" className="py-2">Contacto y Sugerencias</a>
-                    <a href="#trabaja" className="py-2">Trabajá con nosotros!</a>
+                    <Link to={"/"} className="py-2">Inicio</Link>
+                    <Link to="/menu" className="py-2">Menú</Link>
+                    <Link to="https://pedidos.theboxburgerculture.com.ar/" className="py-2">Pedí por acá!</Link>
+                    <Link to="/locales" className="py-2">Locales</Link>
+                    <Link to="#cultura" className="py-2">Cultura TheBOX</Link>
+                    <Link to="/franquicias" className="py-2">Franquicias</Link>
+                    <Link to="#contacto" className="py-2">Contacto y Sugerencias</Link>
+                    <Link to="#trabaja" className="py-2">Trabajá con nosotros!</Link>
                 </nav>
                 <div className="bg-[#FDDF3A] h-px mb-[7rem]">
 
                     <div className="flex text-center p-3 font-custom1">
                         Seguinos en instagram!
-                        <a href="https://www.instagram.com/theboxburgerculture/" className="ml-5">
+                        <Link to="https://www.instagram.com/theboxburgerculture/" className="ml-5">
                             <FaInstagram size={25} />
-                        </a>
+                        </Link>
                     </div>
 
                     <p className="text-center text-xs text-gray-500 sm:text-left font-custom1 mt-5">

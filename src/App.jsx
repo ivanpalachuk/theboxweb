@@ -7,6 +7,8 @@ import Footer from "./components/Footer/Footer";
 import Menu from "./components/Menu/Menu";
 import MenuContainer from "./components/MenuContainer/MenuContainer"
 import Branches from "./components/Branches/Branches";
+import BranchesContainer from "./components/BranchesContainer/BranchesContainer";
+import Franchises from "./components/Franchises/Franchises";
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/menu" element={<Menu />} />
+        <Route path="/locales" element={<Branches />} />
+        <Route path="/franquicias" element={<Franchises />} />
       </Routes>
       <Footer />
     </BrowserRouter>
@@ -27,7 +31,7 @@ const Home = () => {
     <>
       <Carrousel />
       <MenuContainer />
-      <Branches />
+      <BranchesContainer />
     </>
   );
 };

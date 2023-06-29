@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { GoogleMap, useLoadScript, MarkerF,InfoWindowF } from "@react-google-maps/api";
+import { GoogleMap, useLoadScript, MarkerF, InfoWindowF } from "@react-google-maps/api";
 import logoSymbol from "/images/LogoSIMBOL.png"
 
 const Map = () => {
@@ -29,7 +29,8 @@ const Map = () => {
             <GoogleMap
                 zoom={11}
                 center={{ lat: -37.97235646204869, lng: -57.54639106291803 }}
-                mapContainerStyle={{ height: "500px", width: "100%" }}
+                mapContainerStyle={{ height: "500px", width: "100%", border: "yellow 2px solid" }}
+                
             >
                 <MarkerF position={{ lat: -38.05853175230957, lng: -57.5684188193814 }} icon={markerIcon} title={"Edison"} />
                 <MarkerF position={{ lat: -37.97235646204869, lng: -57.544195680355664 }} icon={markerIcon} title={"Centro"} />
