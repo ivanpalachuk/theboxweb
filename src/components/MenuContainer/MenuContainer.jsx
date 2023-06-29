@@ -5,7 +5,7 @@ const MenuContainer = () => {
   return (
     <>
       <div
-        className="max-w-[1400px] h-[780px] w-full m-auto relative text-center flex justify-center items-center"
+        className="max-w-[1400px] h-screen w-full m-auto relative text-center flex justify-center items-center"
         id="menu"
       >
         <div

@@ -34,7 +34,7 @@ const Sidebar = () => {
                     <a href="#inicio" className="py-2">Inicio</a>
                     <a href="#menu" className="py-2">Menú</a>
                     <a href="https://pedidos.theboxburgerculture.com.ar/" className="py-2">Pedí por acá!</a>
-                    <a href="#locales" className="py-2">Locales</a>
+                    <a href="#branches" className="py-2">Locales</a>
                     <a href="#franquicias" className="py-2">Franquicias</a>
                     <a href="#cultura" className="py-2">Cultura TheBOX</a>
                     <a href="#contacto" className="py-2">Contacto y Sugerencias</a>
