@@ -40,7 +40,7 @@ const Sidebar = () => {
                     <a href="#contacto" className="py-2">Contacto y Sugerencias</a>
                     <a href="#trabaja" className="py-2">Trabajá con nosotros!</a>
                 </nav>
-                <div className="bg-[#FDDF3A] h-px mb-28">
+                <div className="bg-[#FDDF3A] h-px mb-[7rem]">
 
                     <div className="flex text-center p-3 font-custom1">
                         Seguinos en instagram!
