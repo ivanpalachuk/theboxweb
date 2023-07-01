@@ -10,7 +10,7 @@ import Branches from "./components/Branches/Branches";
 import BranchesContainer from "./components/BranchesContainer/BranchesContainer";
 import Franchises from "./components/Franchises/Franchises";
 import Mision from "./components/Mision/Mision";
-import WorkwithUs from "./components/WorkwithUS/WorkwithUs";
+import WorkwithUs from "./components/WorkwithUs/WorkwithUs";
 
 function App() {
   return (
