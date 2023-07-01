@@ -1,5 +1,5 @@
-import { useMemo } from "react";
-import { GoogleMap, useLoadScript, MarkerF, InfoWindowF } from "@react-google-maps/api";
+
+import { GoogleMap, useLoadScript, MarkerF} from "@react-google-maps/api";
 import logoSymbol from "/images/LogoSIMBOL.png"
 
 const Map = () => {

@@ -2,6 +2,11 @@ import { Link } from "react-router-dom"
 import { BiSolidHeart } from "react-icons/bi"
 
 const Footer = () => {
+
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+
     return (
         < footer className="bg-black font-custom1" >
             <div className="mx-auto max-w-screen-xl px-4 pb-6 pt-16 sm:px-6 lg:px-8">
@@ -32,14 +37,14 @@ const Footer = () => {
 
                         <ul className="mt-4 space-y-2 text-lg text-gray-700 uppercase">
                             <li>
-                                <Link to="/cultura" className="text-gray-700 transition hover:text-gray-700/75">Nuestra cultura</Link>
+                                <Link to="/cultura" className="text-gray-700 transition hover:text-gray-700/75" onClick={scrollToTop}>Nuestra cultura</Link>
                             </li>
                             <li>
-                                <Link to="/locales" className="text-gray-700 transition hover:text-gray-700/75"> Nuestras sucursales</Link>
+                                <Link to="/locales" className="text-gray-700 transition hover:text-gray-700/75" onClick={scrollToTop}> Nuestras sucursales</Link>
 
                             </li>
                             <li>
-                                <Link to="/trabajo" className="text-gray-700 transition hover:text-gray-700/75"> Ofertas Laborales</Link>
+                                <Link to="/trabajo" className="text-gray-700 transition hover:text-gray-700/75" onClick={scrollToTop}> Ofertas Laborales</Link>
                             </li>
                         </ul>
                     </div>
@@ -53,7 +58,7 @@ const Footer = () => {
                             </li>
 
                             <li>
-                                <Link to="/menu" className="text-gray-700 transition hover:text-gray-700/75">Hamburguesas</Link>
+                                <Link to="/menu" className="text-gray-700 transition hover:text-gray-700/75" onClick={scrollToTop}>Hamburguesas</Link>
                             </li>
 
                             <li>
@@ -67,7 +72,7 @@ const Footer = () => {
 
                         <ul className="mt-4 space-y-2 text-lg text-gray-700 uppercase">
                             <li>
-                                <Link to="/franquicias" className="text-gray-700 transition hover:text-gray-700/75">Escribinos para saber mas</Link>
+                                <Link to="/franquicias" className="text-gray-700 transition hover:text-gray-700/75" onClick={scrollToTop}>Escribinos para saber mas</Link>
                             </li>
                         </ul>
                     </div>

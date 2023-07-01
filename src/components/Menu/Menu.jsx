@@ -1,6 +1,6 @@
 const Menu = () => {
   const burgersURL = [
-    { url: "/images/burgerPNG/AtlanticaMax.png", name: "Atlantica Max" },
+    { url: "/images/burgerPNG/AtlanticaMax.png", name: "Atlantica Max", text: "lorem ipsum" },
     { url: "images/burgerPNG/BigBox.png", name: "Big Box" },
     { url: "images/burgerPNG/BigPapooza.png", name: "Big Papooza" },
     { url: "images/burgerPNG/BlueBurger.png", name: "BlueBurger" },
@@ -11,36 +11,50 @@ const Menu = () => {
 
   return (
     <>
-  
-      <div className="max-w-[1400px] w-full m-aut text-[#FDDF3A]">
-        <div className="bg-[#FDDF3A]">
-          <div className="mx-auto max-w-2xl px-4 py-8 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-            <h2 className="text-2xl font-bold text-center text-black font-custom1 border-b-2 border-current mt-12">NUESTRAS CREACIONES</h2>
-            <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-              {burgersURL.map((product, id) => (
-                <div key={id} className="group relative">
-                  <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-3xl bg-black lg:aspect-none lg:h-80">
-                    <img
-                      src={product.url}
-                      alt={product.imageAlt}
-                      className="h-full w-full object-cover object-center lg:h-full lg:w-full transition-transform duration-300 transform group-hover:scale-150"
-                    />
-                  </div>
-                  <div className="mt-4 flex justify-center">
-                    <div>
-                      <h3 className="text-2xl text-black text-center font-custom1">
-                        {product.name}
-                      </h3>
-                    </div>
+
+      {/* Fondo de la pagina   */}
+      <div className="bg-theboxyellow">
+        {/* Contenedor de titulo y grupo */}
+        <div className="mx-auto max-w-2xl px-4 py-8 pb-12 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+          {/* Titulo */}
+          <h2 className="text-2xl font-bold text-center text-black font-custom1 border-b-2 border-current mt-12">NUESTRAS CREACIONES</h2>
+
+          {/* Contenedor del grupo de productos */}
+          <div className="mt-8 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8 [perspective:1000px]">
+
+            {burgersURL.map((product, id) => (
+
+              <div key={id} className="group relative">
+
+                <div className="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] bg-black">
+                  <img
+                    src={product.url}
+                    alt={product.imageAlt}
+                    className="h-full w-full rounded-xl object-cover shadow-xl shadow-black/40"
+                  />
+                  <div className="absolute inset-0 h-full w-full rounded-xl bg-black/80 px-12 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+                    <div className='flex justify-center font-custom1 text-theboxyellow text-xl uppercase p-8'>{product.text}</div>
                   </div>
                 </div>
-              ))}
-            </div>
+
+
+                <div className="mt-2 flex justify-center">
+                  <div>
+                    <h3 className="text-2xl text-black text-center font-custom1">
+                      {product.name}
+                    </h3>
+                  </div>
+                </div>
+              </div>
+
+
+
+            ))}
+
           </div>
         </div>
-      </div>
+      </div >
     </>
   )
 }
-
 export default Menu

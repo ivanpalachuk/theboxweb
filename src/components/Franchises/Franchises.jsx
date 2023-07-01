@@ -5,7 +5,7 @@ const BranchesContainer = () => {
 
     const email = "ivan.palachuk@outlook.com.ar";
     const subject = encodeURIComponent("Sobre sus franquicias");
-    const body ="Buenas! Me gustaria que me informen sobre sus franquicias, envio este mail como primer contacto, gracias!"
+    const body = "Buenas! Me gustaria que me informen sobre sus franquicias, envio este mail como primer contacto, gracias!"
     const bodyMessage = "¿Estás interesado en fomentar la cultura THE BOX? ¡Escribínos un correo y vamos a hacer lo posible para que tu ciudad pueda disfrutar de las mejores hamburguesas!"
 
 
@@ -22,7 +22,7 @@ const BranchesContainer = () => {
                     <div className="flex justify-center items-center flex-col mt-32">
                         <img src="/images/ORIGINAL.png" className="w-[50%]" alt="Logo" />
                         <p className='text-white w-[75%] font-custom1 mt-5 uppercase'>{bodyMessage}</p>
-                        <div className="text-[#FDDF3A] animate-bounce mt-5">
+                        <div className="text-theboxyellow animate-bounce mt-5">
                             <BsChevronDoubleDown size={40} />
                         </div>
                         <a href={`mailto:${email}?subject=${subject}&body=${body}`} className="text-white">

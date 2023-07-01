@@ -12,6 +12,7 @@ import Franchises from "./components/Franchises/Franchises";
 import Mision from "./components/Mision/Mision";
 import WorkwithUs from "./components/WorkwithUs/WorkwithUs";
 
+
 function App() {
   return (
     <BrowserRouter>

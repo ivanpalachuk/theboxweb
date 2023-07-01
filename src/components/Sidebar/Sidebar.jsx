@@ -3,6 +3,11 @@ import { FaHamburger, FaTimes, FaInstagram } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Sidebar = () => {
+
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -19,7 +24,7 @@ const Sidebar = () => {
     }, [isOpen]);
 
     return (
-        <div className="fixed top-4 left-3 z-10 w-12 h-12 flex items-center justify-center bg-black text-[#FDDF3A] cursor-pointer rounded-2xl"
+        <div className="fixed top-4 left-3 z-10 w-12 h-12 flex items-center justify-center bg-black text-theboxyellow cursor-pointer rounded-2xl"
             onClick={toggleMenu}
         >
             {isOpen ? (
@@ -27,21 +32,21 @@ const Sidebar = () => {
             ) : (
                 <FaHamburger size={24} />
             )}
-            <div className={`fixed top-0 left-0 z-20 w-60 h-screen bg-black text-[#FDDF3A] transform rounded-r-3xl transition-transform duration-500 ease-in-out ${isOpen ? "translate-x-0" : "-translate-x-full"} overflow-hidden flex flex-col justify-between`}>
-                <button className="absolute top-4 right-3 text-[#FDDF3A]" onClick={toggleMenu}>
+            <div className={`fixed top-0 left-0 z-20 w-60 h-screen bg-black text-theboxyellow transform rounded-r-3xl transition-transform duration-500 ease-in-out ${isOpen ? "translate-x-0" : "-translate-x-full"} overflow-hidden flex flex-col justify-between`}>
+                <button className="absolute top-4 right-3 text-theboxyellow" onClick={toggleMenu}>
                     <FaTimes size={24} />
                 </button>
                 <nav className="flex flex-col p-4 font-custom1 mt-5">
-                    <Link to="/" className="py-2">Inicio</Link>
-                    <Link to="/menu" className="py-2">Menú</Link>
+                    <Link to="/" className="py-2" onClick={scrollToTop}>Inicio</Link>
+                    <Link to="/menu" className="py-2" onClick={scrollToTop}>Menú</Link>
                     <Link to="https://pedidos.theboxburgerculture.com.ar/" className="py-2">Pedí por acá!</Link>
-                    <Link to="/locales" className="py-2">Locales</Link>
-                    <Link to="/cultura" className="py-2">Cultura TheBOX</Link>
-                    <Link to="/franquicias" className="py-2">Franquicias</Link>
-                    <Link to="#contacto" className="py-2">Contacto y Sugerencias</Link>
-                    <Link to="/trabajo" className="py-2">Trabajá con nosotros!</Link>
+                    <Link to="/locales" className="py-2" onClick={scrollToTop}>Locales</Link>
+                    <Link to="/cultura" className="py-2" onClick={scrollToTop}>Cultura TheBOX</Link>
+                    <Link to="/franquicias" className="py-2" onClick={scrollToTop}>Franquicias</Link>
+                    <Link to="#contacto" className="py-2" onClick={scrollToTop}>Contacto y Sugerencias</Link>
+                    <Link to="/trabajo" className="py-2" onClick={scrollToTop}>Trabajá con nosotros!</Link>
                 </nav>
-                <div className="bg-[#FDDF3A] h-px mb-[12rem]">
+                <div className="bg-theboxyellow h-px mb-[12rem]">
 
                     <div className="flex text-center p-3 font-custom1">
                         Seguinos en instagram!
@@ -51,7 +56,7 @@ const Sidebar = () => {
                     </div>
 
                     <p className="text-center text-xs text-gray-500 sm:text-left font-custom1 mt-5">
-                        Copyright &copy; 2023. Todos los derechos reservados
+                        Copyright & copy; 2023. Todos los derechos reservados
                     </p>
                 </div> {/* Línea de color amarillo */}
             </div>

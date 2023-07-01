@@ -16,11 +16,11 @@ const MenuContainer = () => {
         >
           <div className="flex justify-center items-center flex-col mt-32">
             <img src="/images/LogoSIMBOL.png" className="w-[50%]" alt="Logo" />
-            <div className="text-[#FDDF3A] animate-bounce mt-5">
+            <div className="text-theboxyellow animate-bounce mt-5">
               <BsChevronDoubleDown size={40} />
             </div>
             <Link to="/menu">
-              <button className="text-xl text-[#FDDF3A] mt-8 font-custom1 -rotate-12 border-2 border-current p-2 rounded-lg">
+              <button className="text-xl text-theboxyellow mt-8 font-custom1 -rotate-12 border-2 border-current p-2 rounded-lg">
                 CONOCE EL MENU
               </button>
             </Link>
