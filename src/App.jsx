@@ -9,6 +9,8 @@ import MenuContainer from "./components/MenuContainer/MenuContainer"
 import Branches from "./components/Branches/Branches";
 import BranchesContainer from "./components/BranchesContainer/BranchesContainer";
 import Franchises from "./components/Franchises/Franchises";
+import Mision from "./components/Mision/Mision";
+import WorkwithUs from "./components/WorkwithUS/WorkwithUs";
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
         <Route path="/menu" element={<Menu />} />
         <Route path="/locales" element={<Branches />} />
         <Route path="/franquicias" element={<Franchises />} />
+        <Route path="/cultura" element={<Mision />} />
+        <Route path="/trabajo" element={<WorkwithUs />} />
       </Routes>
       <Footer />
     </BrowserRouter>

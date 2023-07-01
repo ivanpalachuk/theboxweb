@@ -32,16 +32,16 @@ const Sidebar = () => {
                     <FaTimes size={24} />
                 </button>
                 <nav className="flex flex-col p-4 font-custom1 mt-5">
-                    <Link to={"/"} className="py-2">Inicio</Link>
+                    <Link to="/" className="py-2">Inicio</Link>
                     <Link to="/menu" className="py-2">Menú</Link>
                     <Link to="https://pedidos.theboxburgerculture.com.ar/" className="py-2">Pedí por acá!</Link>
                     <Link to="/locales" className="py-2">Locales</Link>
-                    <Link to="#cultura" className="py-2">Cultura TheBOX</Link>
+                    <Link to="/cultura" className="py-2">Cultura TheBOX</Link>
                     <Link to="/franquicias" className="py-2">Franquicias</Link>
                     <Link to="#contacto" className="py-2">Contacto y Sugerencias</Link>
-                    <Link to="#trabaja" className="py-2">Trabajá con nosotros!</Link>
+                    <Link to="/trabajo" className="py-2">Trabajá con nosotros!</Link>
                 </nav>
-                <div className="bg-[#FDDF3A] h-px mb-[7rem]">
+                <div className="bg-[#FDDF3A] h-px mb-[12rem]">
 
                     <div className="flex text-center p-3 font-custom1">
                         Seguinos en instagram!

@@ -1,6 +1,3 @@
-import React from 'react'
-
-
 const Menu = () => {
   const burgersURL = [
     { url: "/images/burgerPNG/AtlanticaMax.png", name: "Atlantica Max" },

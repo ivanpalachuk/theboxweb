@@ -5,9 +5,13 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+
     extend: {
       fontFamily: {
         custom1: ['Neufreit-Medium', "sans-serif"]
+      },
+      colors: {
+        theboxyellow: "#FDDF3A"
       }
     },
   },
