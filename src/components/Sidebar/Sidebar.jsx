@@ -48,9 +48,9 @@ const Sidebar = () => {
                 </nav>
                 <div className="bg-theboxyellow h-px mb-[12rem]">
 
-                    <div className="flex text-center p-3 font-custom1">
-                        Seguinos en instagram!
-                        <Link to="https://www.instagram.com/theboxburgerculture/" className="ml-5">
+                    <div className="text-center p-2 font-custom1">
+                        <Link to="https://www.instagram.com/theboxburgerculture/" className="flex justify-between">
+                            Seguinos en instagram!
                             <FaInstagram size={25} />
                         </Link>
                     </div>
