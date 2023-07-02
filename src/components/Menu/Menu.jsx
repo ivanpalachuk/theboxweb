@@ -34,19 +34,19 @@ const Menu = () => {
           </h2>
 
           {/* Contenedor del grupo de productos */}
-          <div className="mt-8 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8 [perspective:1000px]">
+          <div className="mt-8 grid grid-cols-1 gap-x-4 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
             {Data.map((product, id) => (
 
-              <div key={id} className="group relative">
+              <div key={id} className="max-w-[320px] flex flex-col mx-auto">
 
                 <ReactCardFlip
                   isFlipped={flippedCards.includes(id)}
                   flipDirection="horizontal"
                   flipSpeedBackToFront={1}
                   flipSpeedFrontToBack={1}
-                  cardStyles={{front:frontCardStyles}}
+                  cardStyles={{ front: frontCardStyles }}
                 >
-                  <div onClick={() => handleClick(id)} className="relative h-[320px]  rounded-xl shadow-xl p-4 bg-black ">
+                  <div onClick={() => handleClick(id)} className="relative h-[320px] w-full  rounded-xl shadow-xl p-4 bg-black ">
 
                     <img
                       src={product.url}
@@ -56,7 +56,7 @@ const Menu = () => {
 
                   </div>
 
-                  <div onClick={() => handleClick(id)} className="relative h-[320px] rounded-xl bg-black/60 px-4 pb-4 text-center flex flex-col justify-between">
+                  <div onClick={() => handleClick(id)} className="relative h-[320px] w-full rounded-xl bg-black/60 px-4 pb-4 text-center flex flex-col justify-between">
 
 
                     <div className="font-custom1 text-theboxyellow text-lg uppercase mt-8 mb-4 tracking-widest font-bold">
@@ -80,9 +80,9 @@ const Menu = () => {
                 </div>
               </div>
             ))}
+          </div>
         </div>
-      </div>
-    </div >
+      </div >
     </>
   );
 };
