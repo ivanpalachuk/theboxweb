@@ -46,7 +46,7 @@ const Menu = () => {
                   flipSpeedFrontToBack={1}
                   cardStyles={{ front: frontCardStyles }}
                 >
-                  <div onClick={() => handleClick(id)} className="relative h-[320px] w-[320] rounded-xl shadow-xl p-4 bg-black ">
+                  <div onClick={() => handleClick(id)} className="relative h-[400px] w-[400px] rounded-xl shadow-xl p-4 bg-black ">
 
                     <img
                       src={product.url}
@@ -56,7 +56,7 @@ const Menu = () => {
 
                   </div>
 
-                  <div onClick={() => handleClick(id)} className="relative h-[320px] w-[320] rounded-xl bg-black/80 px-4 pb-4 text-center flex flex-col justify-between">
+                  <div onClick={() => handleClick(id)} className="relative h-[400px] w-[400px] rounded-xl bg-black/80 px-4 pb-4 text-center flex flex-col justify-between">
 
 
                     <div className="font-custom1 text-theboxyellow text-lg uppercase mt-8 mb-4 tracking-widest font-bold">
