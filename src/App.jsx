@@ -1,13 +1,13 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Sidebar from "./components/Sidebar/Sidebar"
-import Logo from "./components/Logo/Logo"
-import Carrousel from "./components/Carrousel/Carrousel"
+import Logo from "./components/Home/Logo/Logo"
+import Carrousel from "./components/Home/Carrousel"
 import Footer from "./components/Footer/Footer";
-import Menu from "./components/Menu/Menu";
+import Menu from "./components/MenuContainer/Menu/Menu";
 import MenuContainer from "./components/MenuContainer/MenuContainer"
 import Branches from "./components/Branches/Branches";
-import BranchesContainer from "./components/BranchesContainer/BranchesContainer";
+import BranchesContainer from "./components/Branches/BranchesContainer/BranchesContainer";
 import Franchises from "./components/Franchises/Franchises";
 import Mision from "./components/Mision/Mision";
 import WorkwithUs from "./components/WorkwithUs/WorkwithUs";
