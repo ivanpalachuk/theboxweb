@@ -107,7 +107,7 @@ const Register = () => {
 
                 <div className="text-theboxyellow mt-6">
                     Ya sos parte de la comunidad?
-                    <Link to={"/login"} className="no-underline border-b border-blue text-blue" > Log in</Link>.
+                    <Link to={"/login"} className="no-underline border-b border-blue text-blue" >ingresa</Link>.
                 </div>
             </div>
         </div>
