@@ -1,16 +1,19 @@
-import { useState } from "react"
-import { Link } from "react-router-dom";
+import { useState} from "react"
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../../context/AuthContext";
+
 
 
 const Register = () => {
 
-
+    const { signUp } = useAuth()
 
     const [user, setUser] = useState({
         email: "",
         password: "",
     })
     const [error, setError] = useState()
+    const navigate = useNavigate()
 
 
     const [passwordMatch, setPasswordMatch] = useState("")
