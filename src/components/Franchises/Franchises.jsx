@@ -12,7 +12,7 @@ const BranchesContainer = () => {
     return (
         <>
             <div
-                className="max-w-[1400px] h-screen w-full m-auto relative text-center flex justify-center items-center">
+                className="max-w-[1400px] h-screen w-full m-auto relative text-center flex justify-center items-center [word-spacing:3px]">
                 <div
                     style={{
                         backgroundImage: `url(/images/depositphotos_68903121-stock-photo-black-brick-wall-for-background.jpg)`,

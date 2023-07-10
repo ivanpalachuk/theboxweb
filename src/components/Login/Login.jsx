@@ -1,20 +1,24 @@
-import { useState } from "react"
-import { Link } from "react-router-dom";
-
+import { useState } from "react";
+import { useAuth } from "../../context/AuthContext";
+import { Link, useNavigate } from "react-router-dom";
+import ErrorModal from "../Register/ErrorModal";
 
 const Login = () => {
 
 
-    // Usuario a registrar
+    const { logIn } = useAuth()
+    const navigate = useNavigate()
+
+
     const [user, setUser] = useState({
         email: "",
         password: "",
+        nickname: ""
     })
-    //Manejo de error en caso que el usuario no pueda autentificar
+
     const [error, setError] = useState()
-
-
-    const [passwordMatch, setPasswordMatch] = useState("")
+    const [showModal, setShowModal] = useState(false);
+    const [validationError, setValidationError] = useState("")
 
     const handleChange = ({ target: { name, value } }) => {
         setUser({
@@ -22,34 +26,21 @@ const Login = () => {
         })
     }
 
-    //Validaciones submit
+    const handleCloseModal = () => {
+        setShowModal(false);
+    };
+
     const submitHandler = async (e) => {
 
         e.preventDefault()
-
-        const regexEmail =
-            /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-
-        if (user.email == '' || user.password == '') {
-
-            alert("Los campos no pueden estar vacios")
-
-        }
-        if (user.email !== '' && !regexEmail.test(user.email)) {
-            alert("Ingresa un formato de mail valido")
-        }
-        if (user.password !== passwordMatch) {
-            alert("Los password no coinciden")
-        }
-
         try {
-            await signUp(user.email, user.password)
-            navigate("/")
+            await logIn(user.email, user.password)
+            navigate("/panel")
         } catch (error) {
-            setError(error.message)
+            setError(error.message);
+            setShowModal(true);
         }
     }
-
 
 
     return (
@@ -87,6 +78,9 @@ const Login = () => {
                     No tenes cuenta?
                     <Link to={"/registro"} className="no-underline border-b border-blue text-blue ml-1" >Registrate!</Link>.
                 </div>
+                {showModal && (
+                    <ErrorModal error={error} validationError={validationError} onClose={handleCloseModal} />
+                )}
             </div>
         </div>
     )

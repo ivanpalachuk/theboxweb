@@ -1,6 +1,6 @@
 export default function BranchCard(props) {
     return (
-        <div className="cardContainer rounded-xl bg-theboxyellow w-[90%] max-w-xl h-auto flex flex-row mb-4">
+        <div className="cardContainer rounded-xl bg-theboxyellow w-[90%] max-w-xl h-auto flex flex-row mb-4 [word-spacing:3px]">
             <div className="imageContainer w-[40%] h-auto">
                 <div className="imageContent w-full h-full bg-cover bg-center rounded-l-xl" style={{ backgroundImage: `url(/images/${props.url})` }}></div>
             </div>

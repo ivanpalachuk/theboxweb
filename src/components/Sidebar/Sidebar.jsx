@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 import { FaHamburger, FaTimes, FaInstagram } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import UserPanel from "./UserPanel"
+import UserPanel from "../UserPanel/UserPanel";
+import { useAuth } from "../../context/AuthContext";
 
 const Sidebar = () => {
 
-    const [isLogged, setisLogged] = useState(false)
-
+    const { user } = useAuth()
 
     const scrollToTop = () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
@@ -48,9 +48,8 @@ const Sidebar = () => {
                     <Link to="/locales" className="py-2" onClick={scrollToTop}>Locales</Link>
                     <Link to="/cultura" className="py-2" onClick={scrollToTop}>Cultura TheBOX</Link>
                     <Link to="/franquicias" className="py-2" onClick={scrollToTop}>Franquicias</Link>
-                    <Link to="#contacto" className="py-2" onClick={scrollToTop}>Contacto y Sugerencias</Link>
                     <Link to="/trabajo" className="py-2" onClick={scrollToTop}>Trabajá con nosotros!</Link>
-                    {!isLogged && <Link to="/registro" className="py-2" onClick={scrollToTop}>Registrate</Link>}
+                    {!user && <Link to="/registro" className="py-2" onClick={scrollToTop}>Registrate</Link>}
                 </nav>
 
                 <UserPanel />

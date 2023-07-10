@@ -13,6 +13,8 @@ import WorkwithUs from "./components/WorkwithUs/WorkwithUs";
 import Register from "./components/Register/Register";
 import Login from "./components/Login/Login";
 import NotFound from "./components/NotFound/NotFound";
+import Panel from "./components/UserPanel/Panel";
+import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
 
 
 
@@ -31,6 +33,14 @@ function App() {
           <Route path="/trabajo" element={<WorkwithUs />} />
           <Route path="/registro" element={<Register />} />
           <Route path="/login" element={<Login />} />
+          <Route path=
+            "/panel"
+            element={
+              <ProtectedRoute>
+                <Panel />
+              </ProtectedRoute>
+            }
+          />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />

@@ -25,11 +25,11 @@ const Menu = () => {
   return (
     <>
       {/* Fondo de la pagina */}
-      <div className="bg-gradient-to-b from-theboxyellow via-yellow-600 to-theboxyellow">
+      <div className="bg-black [word-spacing:3px]">
         {/* Contenedor de titulo y grupo */}
         <div className="mx-auto max-w-2xl px-4 py-8 pb-12 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
           {/* Titulo */}
-          <h2 className="text-3xl font-extrabold text-center text-black font-custom1 border-b-2 border-current mt-12">
+          <h2 className="text-3xl font-extrabold text-center text-theboxyellow font-custom1 border-b-2 border-current mt-12">
             NUESTRAS CREACIONES
           </h2>
 
@@ -59,9 +59,9 @@ const Menu = () => {
                   <div onClick={() => handleClick(id)} className="relative h-[320px] w-full rounded-xl bg-black/60 px-4 pb-4 text-center flex flex-col justify-between">
 
 
-                    <div className="font-custom1 text-theboxyellow text-lg uppercase mt-8 mb-4 tracking-widest font-bold">
+                    <div className="font-custom1 text-theboxyellow text-lg uppercase mt-8 mb-4  font-bold">
                       {product.text}
-                    </div>
+                    </div>s
 
                     <Link to="https://pedidos.theboxburgerculture.com.ar">
                       <button className="text-theboxyellow font-custom1 uppercase text-m border-2 rounded-2xl p-2 border-current">
@@ -74,7 +74,7 @@ const Menu = () => {
 
                 <div className="mt-2 flex justify-center"></div>
                 <div>
-                  <h3 className="text-2xl text-black text-center font-custom1 uppercase font-black">
+                  <h3 className="text-2xl text-theboxyellow text-center font-custom1 uppercase font-black">
                     {product.name}
                   </h3>
                 </div>
