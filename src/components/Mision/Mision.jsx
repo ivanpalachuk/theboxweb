@@ -21,7 +21,7 @@ const Mision = () => {
             )}
 
             {isTextVisible && (
-                <p className="font-custom1 text-sm p-4 m-2 mt-16 text-theboxyellow border-solid border-current border-2 rounded-3xl bg-opacity-75 bg-black font-extrabold uppercase ">
+                <p className="font-custom1 p-4 m-2 mt-16 text-theboxyellow border-solid border-current border-2 rounded-3xl bg-opacity-75 bg-black font-extrabold uppercase">
                     The Box Burger Culture, fundada en 2019 en Mar del Plata, es la referencia indiscutible en el mundo local de las hamburguesas, brindando una experiencia gastronómica excepcional a nuestros clientes. Nuestro objetivo es satisfacer los paladares más exigentes y transmitir la pasión por la cultura hamburguesera en cada bocado. Nos enorgullece ofrecer hamburguesas únicas y deliciosas, elaboradas con ingredientes frescos y de alta calidad. Con tres exitosas sucursales en la actualidad, estamos comprometidos con la expansión a nivel nacional, llevando nuestra propuesta culinaria a nuevas ciudades y comunidades en todo el país. Buscamos establecer relaciones duraderas con nuestros clientes, ofreciendo un servicio amigable y un ambiente acogedor en cada una de nuestras ubicaciones. En The Box Burger Culture, nos enorgullece llevar la esencia de las hamburguesas a un nivel superior y aspiramos a convertirnos en una marca reconocida en todo el territorio argentino.
                 </p>
             )}

@@ -52,8 +52,9 @@ const Sidebar = () => {
                     {!user && <Link to="/registro" className="py-2" onClick={scrollToTop}>Registrate</Link>}
                 </nav>
 
-                <UserPanel />
-
+                <div className="relative top-16">
+                    <UserPanel />
+                </div>
                 <div className="bg-theboxyellow h-px mb-[12rem]">
 
                     <div className="text-center p-1 font-custom1">
