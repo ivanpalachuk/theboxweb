@@ -49,7 +49,7 @@ const Register = () => {
             setShowModal(true);
         } else {
             try {
-                await signUp(user.email, user.password, user.displayName);
+                await signUp(user.email, user.password, user.displayName, user.phone);
                 navigate("/panel");
             } catch (error) {
                 setError(error.message);
