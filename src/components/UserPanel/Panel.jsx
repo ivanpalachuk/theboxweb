@@ -3,7 +3,7 @@ import { useAuth } from "../../context/AuthContext";
 const Panel = () => {
 
     const { user } = useAuth()
-    console.log(user.phoneNumber)
+    console.log(user)
     return (
         <div className="h-screen bg-black [word-spacing:3px] text-theboxyellow  font-custom1 ">
             <h1 className=" uppercase text-3xl mx-auto w-[90%] text-center p-4 relative top-16">Bienvenido a la Comunidad</h1>
