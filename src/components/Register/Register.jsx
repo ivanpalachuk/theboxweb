@@ -11,7 +11,8 @@ const Register = () => {
     const [user, setUser] = useState({
         displayName: "",
         email: "",
-        password: ""
+        password: "",
+        phone:""
     });
 
     const [error, setError] = useState("");
@@ -83,7 +84,14 @@ const Register = () => {
                             onChange={handleChange}
                             autoComplete="current-email"
                         />
-
+                        <input
+                        type="text"
+                        className="block border border-grey-light w-full p-3 rounded mb-4"
+                        name="phone"
+                        placeholder="Número de teléfono"
+                        onChange={handleChange}
+                        autoComplete="current-phone"
+                      />
                         <input
                             type="password"
                             className="block border border-grey-light w-full p-3 rounded mb-4"
