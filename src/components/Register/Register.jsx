@@ -38,13 +38,20 @@ const Register = () => {
         const regexEmail =
             /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
+        const phoneRegex = /^\+\d{1,15}$/
+
         if (user.email === "" || user.password === "" || user.displayName === "") {
             setValidationError("Los campos no pueden estar vacios")
             setShowModal(true)
         } else if (!regexEmail.test(user.email)) {
             setValidationError("Ingresa un formato de mail valido")
-            setShowModal(true);
-        } else if (user.password !== passwordMatch) {
+            setShowModal(true);}
+        
+            else if (!phoneRegex.test(user.phone)) {
+                setValidationError("Ingresa tu telefono en formato valido")
+                setShowModal(true)}
+            
+         else if (user.password !== passwordMatch) {
             setValidationError("Los passwords no coinciden")
             setShowModal(true);
         } else {
@@ -85,7 +92,7 @@ const Register = () => {
                             autoComplete="current-email"
                         />
                         <input
-                        type="text"
+                        type="phone"
                         className="block border border-grey-light w-full p-3 rounded mb-4"
                         name="phone"
                         placeholder="Número de teléfono"
