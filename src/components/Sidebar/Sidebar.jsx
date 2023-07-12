@@ -7,6 +7,7 @@ import { useAuth } from "../../context/AuthContext";
 const Sidebar = () => {
 
     const { user } = useAuth()
+    
 
     const scrollToTop = () => {
         window.scrollTo({ top: 0, behavior: "smooth" });

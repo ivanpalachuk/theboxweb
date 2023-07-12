@@ -12,7 +12,7 @@ const Register = () => {
         displayName: "",
         email: "",
         password: "",
-        phone:""
+        phone: ""
     });
 
     const [error, setError] = useState("");
@@ -45,13 +45,13 @@ const Register = () => {
             setShowModal(true)
         } else if (!regexEmail.test(user.email)) {
             setValidationError("Ingresa un formato de mail valido")
-            setShowModal(true);}
-        
+            setShowModal(true);
+        }
+        /*
             else if (!phoneRegex.test(user.phone)) {
                 setValidationError("Ingresa tu telefono en formato valido")
-                setShowModal(true)}
-            
-         else if (user.password !== passwordMatch) {
+            setShowModal(true)}*/
+        else if (user.password !== passwordMatch) {
             setValidationError("Los passwords no coinciden")
             setShowModal(true);
         } else {
@@ -92,13 +92,13 @@ const Register = () => {
                             autoComplete="current-email"
                         />
                         <input
-                        type="phone"
-                        className="block border border-grey-light w-full p-3 rounded mb-4"
-                        name="phone"
-                        placeholder="Número de teléfono"
-                        onChange={handleChange}
-                        autoComplete="current-phone"
-                      />
+                            type="phone"
+                            className="block border border-grey-light w-full p-3 rounded mb-4"
+                            name="phone"
+                            placeholder="Número de teléfono"
+                            onChange={handleChange}
+                            autoComplete="current-phone"
+                        />
                         <input
                             type="password"
                             className="block border border-grey-light w-full p-3 rounded mb-4"
