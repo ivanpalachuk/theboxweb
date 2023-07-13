@@ -1,15 +1,10 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import {
-    createUserWithEmailAndPassword,
-    signInWithEmailAndPassword,
-    onAuthStateChanged,
-    signOut,
-    updateProfile
-} from "firebase/auth";
-import { auth } from "../firebase/config";
+import { auth, db } from "../firebase/config";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut, updateProfile } from "firebase/auth";
+import { doc, setDoc } from "firebase/firestore"
 
 
-export const AuthContext = createContext();
+export const AuthContext = createContext()
 
 export const useAuth = () => {
     const context = useContext(AuthContext);
@@ -21,28 +16,36 @@ export function AuthProvider({ children }) {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
 
-    const signUp = (email, password, displayName, phone) => {
-        return createUserWithEmailAndPassword(auth, email, password)
-          .then((userCredential) => {
+    const signUp = async (email, password, displayName, phone) => {
+
+        try {
+            const userCredential = await createUserWithEmailAndPassword(auth, email, password);
             const user = userCredential.user;
-      
-            // Actualizar el perfil del usuario con el número de teléfono
-            return updateProfile(user, {
-              displayName: displayName,
-              phoneNumber: phone // Agregar esta línea para guardar el número de teléfono en el perfil
-            }).then(() => {
-              setUser(user);
+
+            await updateProfile(user, {
+                displayName: displayName
             });
-          });
-      };
 
-    const logIn = (email, password) =>
-        signInWithEmailAndPassword(auth, email, password);
+            await setDoc(doc(db, "users", user.uid),
+                {
+                    displayName: displayName,
+                    email: email,
+                    phone: phone
+                }
+            )
 
+            setUser(user);
+
+        } catch (error) {
+            throw new Error(error.message);
+        }
+    };
+
+    const logIn = (email, password) => signInWithEmailAndPassword(auth, email, password);
     const logOut = () => signOut(auth);
 
     useEffect(() => {
-        onAuthStateChanged(auth, (currentUser) => {
+        const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
             if (currentUser) {
                 setUser(currentUser);
             } else {
@@ -50,6 +53,8 @@ export function AuthProvider({ children }) {
             }
             setLoading(false);
         });
+
+        return () => unsubscribe();
     }, []);
 
     return (

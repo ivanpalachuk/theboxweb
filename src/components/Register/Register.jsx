@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
+import { getFirestore, doc, setDoc } from "firebase/firestore";
 import ErrorModal from "./ErrorModal";
 
 const Register = () => {
@@ -12,7 +13,7 @@ const Register = () => {
         displayName: "",
         email: "",
         password: "",
-        phone: ""
+        phone: "-"
     });
 
     const [error, setError] = useState("");
@@ -56,10 +57,15 @@ const Register = () => {
             setShowModal(true);
         } else {
             try {
-                await signUp(user.email, user.password, user.displayName, user.phone);
+                await signUp(
+                    user.email,
+                    user.password,
+                    user.displayName,
+                    parseInt(user.phone));
                 navigate("/panel");
             } catch (error) {
                 setError(error.message);
+                console.log(error.message)
                 setShowModal(true);
             }
         }
@@ -92,7 +98,7 @@ const Register = () => {
                             autoComplete="current-email"
                         />
                         <input
-                            type="phone"
+                            type="number"
                             className="block border border-grey-light w-full p-3 rounded mb-4"
                             name="phone"
                             placeholder="Número de teléfono"
