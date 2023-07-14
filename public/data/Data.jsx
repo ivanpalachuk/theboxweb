@@ -12,7 +12,7 @@ const Data = [
   {
     url: "images/burgerPNG/BigPapooza.png",
     name: "Big Papooza",
-    text: "Nuestra versión 2.0 de la big, le metimos papas rejillas y papas adentro de la burger, para que no lo tengas que hacer vos",
+    text: "Nuestra versión 2.0 de la big, le metimos papas adentro de la burger, para que no lo tengas que hacer vos; de yapa viene con batatas fritas",
   },
   {
     url: "images/burgerPNG/BlueBurger.png",
