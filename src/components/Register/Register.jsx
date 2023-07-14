@@ -1,11 +1,9 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
-import { getFirestore, doc, setDoc } from "firebase/firestore";
 import ErrorModal from "./ErrorModal";
 
 const Register = () => {
-
     const { signUp } = useAuth();
     const navigate = useNavigate();
 
@@ -13,19 +11,19 @@ const Register = () => {
         displayName: "",
         email: "",
         password: "",
-        phone: "-"
+        phone: "-",
     });
 
     const [error, setError] = useState("");
-    const [validationError, setValidationError] = useState("")
+    const [validationError, setValidationError] = useState("");
     const [passwordMatch, setPasswordMatch] = useState("");
-
     const [showModal, setShowModal] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
 
     const handleChange = ({ target: { name, value } }) => {
         setUser({
             ...user,
-            [name]: value
+            [name]: value,
         });
     };
 
@@ -39,34 +37,30 @@ const Register = () => {
         const regexEmail =
             /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
-        const phoneRegex = /^\+\d{1,15}$/
-
         if (user.email === "" || user.password === "" || user.displayName === "") {
-            setValidationError("Los campos no pueden estar vacios")
-            setShowModal(true)
-        } else if (!regexEmail.test(user.email)) {
-            setValidationError("Ingresa un formato de mail valido")
+            setValidationError("Los campos no pueden estar vacíos");
             setShowModal(true);
-        }
-        /*
-            else if (!phoneRegex.test(user.phone)) {
-                setValidationError("Ingresa tu telefono en formato valido")
-            setShowModal(true)}*/
-        else if (user.password !== passwordMatch) {
-            setValidationError("Los passwords no coinciden")
+        } else if (!regexEmail.test(user.email)) {
+            setValidationError("Ingresa un formato de correo electrónico válido");
+            setShowModal(true);
+        } else if (user.password !== passwordMatch) {
+            setValidationError("Las contraseñas no coinciden");
             setShowModal(true);
         } else {
             try {
+                setIsLoading(true);
                 await signUp(
                     user.email,
                     user.password,
                     user.displayName,
-                    parseInt(user.phone));
+                    parseInt(user.phone)
+                );
                 navigate("/panel");
             } catch (error) {
                 setError(error.message);
-                console.log(error.message)
                 setShowModal(true);
+            } finally {
+                setIsLoading(false);
             }
         }
     };
@@ -126,8 +120,9 @@ const Register = () => {
                         <button
                             type="submit"
                             className="w-full text-center py-3 rounded-xl bg-black text-theboxyellow uppercase hover:bg-green-dark [word-spacing:6px] focus:outline-none my-1"
+                            disabled={isLoading}
                         >
-                            Crear cuenta
+                            {isLoading ? "Cargando..." : "Crear cuenta"}
                         </button>
                     </form>
 
@@ -150,7 +145,7 @@ const Register = () => {
                 </div>
 
                 <div className="text-theboxyellow mt-6">
-                    ¿Ya sos parte de la comunidad?
+                    ¿Ya eres parte de la comunidad?
                     <Link
                         to={"/login"}
                         className="no-underline border-b border-blue text-blue"
@@ -161,7 +156,11 @@ const Register = () => {
                 </div>
 
                 {showModal && (
-                    <ErrorModal error={error} validationError={validationError} onClose={handleCloseModal} />
+                    <ErrorModal
+                        error={error}
+                        validationError={validationError}
+                        onClose={handleCloseModal}
+                    />
                 )}
             </div>
         </div>

@@ -15,6 +15,7 @@ import Login from "./components/Login/Login";
 import NotFound from "./components/NotFound/NotFound";
 import Panel from "./components/UserPanel/Panel";
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
+import PromoCounter from "./components/PromoCounter/PromoCounter";
 
 
 
@@ -42,6 +43,7 @@ function App() {
             }
           />
           <Route path="*" element={<NotFound />} />
+          <Route path="/promoCounterTheBoxPrivate/counter" element={<PromoCounter />} />
         </Routes>
         <Footer />
       </BrowserRouter>
