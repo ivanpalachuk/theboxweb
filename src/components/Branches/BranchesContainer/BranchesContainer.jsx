@@ -5,7 +5,7 @@ const BranchesContainer = () => {
     return (
         <>
             <div
-                className="max-w-[1400px] h-screen w-full m-auto relative text-center flex justify-center items-center"
+                className="max-w-[1800px] h-screen w-full m-auto relative text-center flex justify-center items-center xl:min-h-full"
                 id="menu"
             >
                 <div
@@ -15,7 +15,7 @@ const BranchesContainer = () => {
                     className="w-full h-full bg-center bg-cover"
                 >
                     <div className="flex justify-center items-center flex-col mt-32">
-                        <img src="/images/LogoSIMBOL.png" className="w-[50%]" alt="Logo" />
+                        <img src="/images/LogoSIMBOL.png" className="w-44 xl:w-1/4" alt="Logo" />
                         <div className="text-theboxyellow animate-bounce mt-5">
                             <BsChevronDoubleDown size={40} />
                             <BsChevronDoubleDown size={40} />

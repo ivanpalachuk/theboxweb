@@ -45,7 +45,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
           <Route path="/promoCounterTheBoxPrivate/counter" element={<PromoCounter />} />
         </Routes>
-        <Footer />
+        <Footer/>
       </BrowserRouter>
     </AuthProvider>
   );

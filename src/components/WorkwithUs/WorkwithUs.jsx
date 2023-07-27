@@ -11,8 +11,8 @@ const WorkwithUs = () => {
 
     return (
         <div className="trabajo-container bg-[url(/images/20230127_222053.jpg)] bg-cover bg-center w-full m-auto h-screen relative text-center flex justify-center items-center [word-spacing:3px]">
-            <div className="flex justify-center items-center flex-col mt-18 bg-black bg-opacity-75 rounded-xl border-2 border-theboxyellow w-[75%]">
-                <p className='text-theboxyellow w-[75%] font-custom1 mt-5 h-44 uppercase'>{bodyMessage}</p>
+            <div className="flex justify-center items-center flex-col mt-18 bg-black bg-opacity-75 rounded-xl border-2 border-theboxyellow w-[75%] xl:w-[50%]">
+                <p className='text-theboxyellow w-[75%] font-custom1 mt-5 h-44 uppercase xl:text-3xl'>{bodyMessage}</p>
                 <div className="text-theboxyellow animate-bounce mt-5">
                     <BsChevronDoubleDown size={40} />
                 </div>

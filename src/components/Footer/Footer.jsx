@@ -8,12 +8,14 @@ const Footer = () => {
     };
 
     return (
-        < footer className="bg-black font-custom1" >
-            <div className="mx-auto max-w-screen-xl px-4 pb-6 pt-16 sm:px-6 lg:px-8">
+
+
+        < footer className="bg-black font-custom1 static bottom-0 xl:text-xl" >
+            <div className="mx-auto px-4 pb-6 pt-8 sm:px-6 lg:px-8">
                 <div className="lg:flex lg:items-center lg:justify-between">
                     <div className="flex justify-center text-teal-600 sm:justify-start">
                         <img
-                            className="h-24"
+                            className="h-24 xl:"
                             src="/images/ORIGINAL.png"
                         />
                     </div>
@@ -23,7 +25,7 @@ const Footer = () => {
                 </div>
 
 
-                <div className="mt-4 grid grid-cols-1 gap-8 border-t border-gray-100 pt-16 md:grid-cols-4 lg:grid-cols-6">
+                <div className="mt-4 grid grid-cols-1 gap-9 border-t border-gray-100 pt-16 md:grid-cols-4 lg:grid-cols-7 gird">
                     <div className="text-gray-500 text-center uppercase ">
                         <p>Nos acompañan para brindar la mejor calidad</p>
                         <div className="partners-logos flex p-2 justify-between">
@@ -77,12 +79,13 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    <p className="text-center text-sm text-gray-500 sm:text-left flex justify-center">
-                        2023 - Made with <BiSolidHeart style={{ color: "#cb1515", margin: "1px" }} />
-                        by <a href="mailto:ivan.palachuk@outlook.com" target="_blank" rel="noopener noreferrer">Zarseven Soft</a>
-                    </p>
+                    
 
                 </div>
+                <p className="text-center text-sm text-gray-500 sm:text-left flex justify-center mt-8">
+                    2023 - Made with <BiSolidHeart style={{ color: "#cb1515", margin: "1px" }} />
+                    by <a href="mailto:ivan.palachuk@outlook.com" target="_blank" rel="noopener noreferrer">Zarseven Soft</a>
+                </p>
             </div>
         </footer >
     )

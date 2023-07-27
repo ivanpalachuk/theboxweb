@@ -5,9 +5,11 @@ import BranchesContainer from "../Branches/BranchesContainer/BranchesContainer";
 const Home = () => {
     return (
         <>
-            <Carrousel />
-            <MenuContainer />
-            <BranchesContainer />
+            <div className="bg-black">
+                <Carrousel />
+                <MenuContainer />
+                <BranchesContainer />
+            </div>
         </>
     );
 };
