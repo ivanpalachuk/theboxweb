@@ -1,36 +1,36 @@
 const Data = [
   {
-    url: "/images/burgerPNG/AtlanticaMax.png",
+    url: "/images/burgerPNG/atlantica max.png",
     name: "Atlántica Max",
     text: "Gigante como la costa, provoleta, morrones asados, lechuga con alioli de albahaca",
   },
   {
-    url: "images/burgerPNG/BigBox.png",
+    url: "images/burgerPNG/Big Box Burger.png",
     name: "Big Box",
     text: "Si había una mejor forma de hacer la salsa big era esta, nuestro toque es magia, probá y alegrate como con un gol de Messi",
   },
   {
-    url: "images/burgerPNG/BigPapooza.png",
+    url: "images/burgerPNG/big papooza.png",
     name: "Big Papooza",
     text: "Nuestra versión 2.0 de la big, le metimos papas adentro de la burger, para que no lo tengas que hacer vos; de yapa viene con batatas fritas",
   },
   {
-    url: "images/burgerPNG/BlueBurger.png",
+    url: "images/burgerPNG/blue burger.png",
     name: "Blue Burger",
     text: "Una burger sofisticada, para paladares particulares, nuestra agente 007",
   },
   {
-    url: "images/burgerPNG/Bondiola Braseada.png",
+    url: "images/burgerPNG/bondeloaBraseada.png",
     name: "Bondiola Braseada",
     text: "Bondiola desmenuzada, sí, así de tierna y encima tiene un toque ahumado",
   },
   {
-    url: "images/burgerPNG/Brodas.png",
+    url: "images/burgerPNG/Brodas doble.png",
     name: "Brodas",
     text: "Nuestro buque insignia, probala, sentí el bacon, la salsa cuarto y luego podés aplaudir el tiempo que quieras",
   },
   {
-    url: "images/burgerPNG/Cheese.png",
+    url: "images/burgerPNG/Doble Cheese.png",
     name: "Cheese",
     text: "La madre de todas las recetas, Cheeseburger, la leyenda hecha un plato",
   },
@@ -45,7 +45,7 @@ const Data = [
     text: "Si los gauchos en lugar de asados se hubieran hecho famosos por sus hamburguesas sería por una como esta",
   },
   {
-    url: "images/burgerPNG/Fish Box.png",
+    url: "images/burgerPNG/fishbox.png",
     name: "Fish Box",
     text: "¿Algo más liviano? ¿El nutricionista te dijo que no tanta carne? Tranqui, acá estamos para zafarte",
   },
@@ -55,7 +55,7 @@ const Data = [
     text: "Desde el vamos es doble, aplastamos adentro cebolla caramelizada mientras la cocinamos. Un montón",
   },
   {
-    url: "images/burgerPNG/Jack daniels.png",
+    url: "images/burgerPNG/jackDaniels.png",
     name: "Jack Daniel's",
     text: "Un poco de whisky para caramelizar la cebolla, Papo estaría orgulloso de nosotros",
   },
@@ -80,10 +80,14 @@ const Data = [
     text: "Una explosión de quesos, cheddar, provo, bastoncitos, si fuese una peli sería Rápidos y Furiosos",
   },
   {
-    url: "images/burgerPNG/Veggie.png",
-    name: "Veggie",
+    url: "images/burgerPNG/veggie.png",
+    name: "Veggie NOT",
     text: "Por la razón que sea, obvio que acá tenés la opción vegetariana",
-  },
+  }, {
+    url: "images/burgerPNG/Veggie Box.png",
+    name: "Veggie Box",
+    text: "Mira esos colores, mira ese medallon, como no pedirla!",
+  }
 ];
 
 export default Data;

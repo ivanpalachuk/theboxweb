@@ -27,14 +27,14 @@ const Menu = () => {
       {/* Fondo de la pagina */}
       <div className="bg-black [word-spacing:3px]">
         {/* Contenedor de titulo y grupo */}
-        <div className="mx-auto max-w-2xl px-4 py-8 pb-12 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+        <div className="mx-auto px-4 py-8 pb-12 sm:px-6 sm:py-24 lg:max-w-8xl lg:px-8">
           {/* Titulo */}
           <h2 className="text-3xl font-extrabold text-center text-theboxyellow font-custom1 border-b-2 border-current mt-12">
             NUESTRAS CREACIONES
           </h2>
 
           {/* Contenedor del grupo de productos */}
-          <div className="mt-8 grid grid-cols-1 gap-x-4 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+          <div className="mt-8 grid grid-cols-1 gap-x-4 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
             {Data.map((product, id) => (
 
               <div key={id} className="max-w-[320px] flex flex-col mx-auto">

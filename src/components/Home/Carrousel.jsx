@@ -50,26 +50,29 @@ const Carrousel = () => {
   };
 
   return (
-    <div className="max-w-[1800px] mx-auto h-screen relative group" id="inicio">
-      {allImagesLoaded && (
-        <div style={{ backgroundImage: `url(${slides[currentIndex].url})` }} className="w-full h-full bg-center bg-cover duration-500"></div>
-      )}
-      {slides.map((slide, index) => (
-        <img
-          key={index}
-          src={slide.url}
-          alt="Slide"
-          className="hidden"
-          onLoad={() => handleImageLoad(index)}
-        />
-      ))}
-      <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
-        <BsChevronCompactLeft size={30} onClick={prevSlide} />
+    <>
+
+      <div className="max-w-[1800px] mx-auto h-screen relative group" id="inicio">
+        {allImagesLoaded && (
+          <div style={{ backgroundImage: `url(${slides[currentIndex].url})` }} className="w-full h-full bg-center bg-cover duration-500"></div>
+        )}
+        {slides.map((slide, index) => (
+          <img
+            key={index}
+            src={slide.url}
+            alt="Slide"
+            className="hidden"
+            onLoad={() => handleImageLoad(index)}
+          />
+        ))}
+        <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
+          <BsChevronCompactLeft size={30} onClick={prevSlide} />
+        </div>
+        <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
+          <BsChevronCompactRight size={30} onClick={nextSlide} />
+        </div>
       </div>
-      <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
-        <BsChevronCompactRight size={30} onClick={nextSlide} />
-      </div>
-    </div>
+    </>
   );
 };
 

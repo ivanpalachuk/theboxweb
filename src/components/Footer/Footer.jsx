@@ -15,7 +15,7 @@ const Footer = () => {
                 <div className="lg:flex lg:items-center lg:justify-between">
                     <div className="flex justify-center text-teal-600 sm:justify-start">
                         <img
-                            className="h-24 xl:"
+                            className="h-24"
                             src="/images/ORIGINAL.png"
                         />
                     </div>
@@ -25,7 +25,7 @@ const Footer = () => {
                 </div>
 
 
-                <div className="mt-4 grid grid-cols-1 gap-9 border-t border-gray-100 pt-16 md:grid-cols-4 lg:grid-cols-7 gird">
+                <div className="mt-4 grid grid-cols-1 gap-9 border-t border-gray-100 pt-16 md:grid-cols-4">
                     <div className="text-gray-500 text-center uppercase ">
                         <p>Nos acompañan para brindar la mejor calidad</p>
                         <div className="partners-logos flex p-2 justify-between">
