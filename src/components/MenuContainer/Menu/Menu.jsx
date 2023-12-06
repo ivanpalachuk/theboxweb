@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Data from "/public/data/Data";
 import { Link } from "react-router-dom";
 import ReactCardFlip from "react-card-flip";
+import LazyLoad from 'react-lazy-load';
 
 const Menu = () => {
   const [flippedCards, setFlippedCards] = useState([]);
@@ -47,12 +48,13 @@ const Menu = () => {
                   cardStyles={{ front: frontCardStyles }}
                 >
                   <div onClick={() => handleClick(id)} className="relative h-[320px] w-full  rounded-xl shadow-xl p-4 bg-black ">
-
-                    <img
-                      src={product.url}
-                      alt={product.imageAlt}
-                      className="h-full w-full rounded-xl object-cover"
-                    />
+                    <LazyLoad>
+                      <img
+                        src={product.url}
+                        alt={product.imageAlt}
+                        className="h-full w-full rounded-xl object-cover"
+                      />
+                    </LazyLoad>
 
                   </div>
 
